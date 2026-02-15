@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Wife ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  background:linear-gradient(#ffd6e6,#ffeaf3);
+  font-family:'Dancing Script',cursive;
+  overflow:hidden;
+  color:#4a2b33;
+}
+
+/* Pages */
+.page{
+  position:fixed;
+  width:100%;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:40px;
+  box-sizing:border-box;
+  background:linear-gradient(#ffd6e6,#ffeaf3);
+  transition:transform 0.9s ease, opacity 0.9s ease;
+}
+
+.hidden{
+  transform:translateX(100%);
+  opacity:0;
+  pointer-events:none;
+}
+
+.text{
+  max-width:760px;
+  font-size:28px;
+  line-height:1.7;
+}
+
+/* Tap hint */
+.tap{
+  position:absolute;
+  bottom:40px;
+  width:100%;
+  text-align:center;
+  font-size:18px;
+  opacity:0.7;
+}
+
+/* GIF */
+.gif{
+  margin-top:40px;
+  max-width:260px;
+  width:70%;
+  border-radius:14px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+</style>
+</head>
+
+<body>
+
+<!-- Page 1 -->
+<div class="page" onclick="nextPage(0)">
+  <div>
+    <div class="text">
+      My wife… Tuku ❤️<br><br>
+      I don’t like when even a tiny shadow touches your mood —  
+      especially when I know I’m the reason it did.
+    </div>
+    <div class="tap">tap</div>
+  </div>
+</div>
+
+<!-- Page 2 -->
+<div class="page hidden" onclick="nextPage(1)">
+  <div>
+    <div class="text">
+      You mean peace to me.<br>
+      You mean home to me.<br><br>
+      So when I feel distance in you —  
+      even a little —  
+      my heart immediately misses you.
+    </div>
+    <div class="tap">tap</div>
+  </div>
+</div>
+
+<!-- Page 3 -->
+<div class="page hidden" onclick="nextPage(2)">
+  <div>
+    <div class="text">
+      I never want to be the reason  
+      your softness fades for even a moment.<br><br>
+      You deserve gentleness,<br>
+      patience,<br>
+      and love — always.
+    </div>
+    <div class="tap">tap</div>
+  </div>
+</div>
+
+<!-- Page 4 -->
+<div class="page hidden" onclick="nextPage(3)">
+  <div>
+    <div class="text">
+      If my words, my tone, or my moment  
+      ever felt heavy to you —<br><br>
+      I feel it too.<br>
+      And I never want your heart  
+      to carry anything because of me.
+    </div>
+    <div class="tap">tap</div>
+  </div>
+</div>
+
+<!-- Page 5 APOLOGY -->
+<div class="page hidden" onclick="nextPage(4)">
+  <div>
+    <div class="text">
+      I’m sooooo soooo sorryyyyyyyyyyyyy  
+      my wifeeee 🥺
+    </div>
+    <div class="tap">tap</div>
+  </div>
+</div>
+
+<!-- Final Page -->
+<div class="page hidden">
+  <div>
+    <div class="text">
+      Your happiness matters to me  
+      more than my ego,<br>
+      more than being right,<br>
+      more than anything.<br><br>
+      Please forgive me ❤️
+    </div>
+
+    <img src="forgive.gif" class="gif">
+
+  </div>
+</div>
+
+<script>
+function nextPage(i){
+  const pages=document.querySelectorAll(".page");
+  if(i<pages.length-1){
+    pages[i].classList.add("hidden");
+  }
+}
+</script>
+
+</body>
+</html>
